@@ -26,7 +26,7 @@ class App extends React.Component {
         <header> The Second Opinion</header>
         <NavBar user={this.state.user} handleLogout={this.handleLogout}/>
         <LoginPage handleSignupOrLogin={this.handleSignupOrLogin} />
-        {/* <SignupForm handleSignupOrLogin={this.handleSignupOrLogin}/> */}
+        <SignupForm handleSignupOrLogin={this.handleSignupOrLogin}/>
       </div>
     );
   }

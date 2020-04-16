@@ -11,7 +11,6 @@ class SignupForm extends Component {
     }
 
     handleChange = (event) => {
-        this.props.updateMessage('');
         this.setState({[event.target.name]: event.target.value });
     }
 
@@ -23,7 +22,7 @@ class SignupForm extends Component {
             this.props.history.push('/');
         }
         catch(err) {
-            this.props.updateMessage(err.message);
+            console.log(err);
         }
     }
     isFormInvalid() {
@@ -34,19 +33,19 @@ class SignupForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <input type="text" name='name' placeholder='Name' onChange={this.handleChange}/>
+                    <input type="text" value={this.state.name} name='name' placeholder='Name' onChange={this.handleChange}/>
                 </div>
                 <div>
-                    <input type="email" name='email' placeholder='email' onChange={this.handleChange}/>
+                    <input type="email" value={this.state.email} name='email' placeholder='email' onChange={this.handleChange}/>
                 </div>
                 <div>
-                    <input type="password" name='password' placeholder='Password' onChange={this.handleChange}/>
+                    <input type="password" value={this.state.password} name='password' placeholder='Password' onChange={this.handleChange}/>
                 </div>
                 <div>
-                    <input type="password" name='password' placeholder='Confirm Password' onChange={this.handleChange}/>
+                    <input type="password" name='passwordCheck' placeholder='Confirm Password' onChange={this.handleChange}/>
                 </div>
                 
-                <input type="submit"></input>
+                <button disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
                 <Link to='/'>Cancel</Link>
 
             </form>
