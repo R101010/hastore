@@ -50,7 +50,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-{/* <NavBar user={this.state.user} handleLogout={this.handleLogout}/>
-<LoginPage handleSignupOrLogin={this.handleSignupOrLogin} />
-<SignupForm handleSignupOrLogin={this.handleSignupOrLogin}/> */}
