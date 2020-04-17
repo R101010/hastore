@@ -16,6 +16,7 @@ class LoginPage extends Component {
 
 
   handleSubmit = async (e) => {
+    console.log('hitting login')
     e.preventDefault();
     try {
       await userService.login(this.state)
