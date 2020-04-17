@@ -7,7 +7,7 @@ const SECRET = process.env.SECRET;
 async function signup(req, res) {
   const user = new User(req.body);
   try {
-    user.save();
+    await user.save();
     const token = createJWT(user);
     console.log("here is the token ", token);
     res.json({ token });
@@ -18,7 +18,7 @@ async function signup(req, res) {
 
 async function login(req, res) {
   try {
-    const user = User.findOne({email: req.body.email});
+    const user = await User.findOne({email: req.body.email});
     if (!user) return res.status(401).json({err: 'bad credentials'});
     user.comparePassword(req.body.pw, (err, isMatch) => {
       if (isMatch) {
