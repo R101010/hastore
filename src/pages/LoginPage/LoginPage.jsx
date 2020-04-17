@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../utils/userService'
+import './LoginPage.css';
 
 class LoginPage extends Component {
   
@@ -19,10 +20,8 @@ class LoginPage extends Component {
     try {
       await userService.login(this.state)
       this.props.handleSignupOrLogin();
-
-    
+      this.props.history.push('/');
     } catch (err) {
-      // Use a modal or toast in your apps instead of alert
       alert('Invalid Credentials!');
     }
   }
