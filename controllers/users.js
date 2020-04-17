@@ -7,7 +7,7 @@ const SECRET = process.env.SECRET;
 async function signup(req, res) {
   const user = new User(req.body);
   try {
-    await user.save();
+    user.save();
     const token = createJWT(user);
     console.log("here is the token ", token);
     res.json({ token });
