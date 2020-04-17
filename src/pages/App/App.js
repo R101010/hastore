@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import './App.css';
-import SignupForm from './components/SignupForm/SignupForm';
-import userService from './utils/userService';
+import '../../pages/App/App.css';
+import userService from '../../utils/userService';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
-import LoginPage from './pages/LoginPage/LoginPage';
-import SignupPage from './pages/SignupPage/SignupPage';
+import NavBar from '../../components/NavBar/NavBar';
+import LoginPage from '../../pages/LoginPage/LoginPage';
+import SignupPage from '../../pages/SignupPage/SignupPage';
 
 class App extends React.Component {
   state = {
