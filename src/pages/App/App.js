@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import userService from '../../utils/userService';
 import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
@@ -6,12 +6,45 @@ import NavBar from '../../components/NavBar/NavBar';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import SignupPage from '../../pages/SignupPage/SignupPage';
 
-import * as noteAPI from ''
+import * as noteAPI from '../../utils/noteService';
+import NoteListPage from '../../pages/NoteListPage/NoteListPage'
+import AddNotePage from '../../pages/AddNotePage/AddNotePage'
+import NoteDetailPage from '../../pages/NoteDetailPage/NoteDetailPage';
+import EditNotePage from '../../pages/EditNotePage/EditNotePage';
+
 
 class App extends React.Component {
   state = {
-    user: userService.getUser()
+    user: userService.getUser(),
+    notes: []
+  };
+
+  handleAddNote = async newNteData => {
+    const newNte = await noteAPI.create(newNteData);
+    this.setState(state => ({
+      notes: [...state.notes, newNte]
+    }),
+    () => this.props.history.push('/'));
   }
+  handleUpdateNote = async updatedNteData => {
+    const updatedNote = await noteAPI.update(updatedNteData);
+    const newNotesArray = this.state.notes.map(p =>
+      p._id === updatedNote._id ? updatedNote : p
+      );
+      this.setState(
+        {notes: newNotesArray},
+        () => this.props.history.push('/')
+      );
+  }
+
+  handleDeleteNote= async id => {
+    await noteAPI.deleteOne(id);
+    this.setState(state => ({
+      notes: state.notes.filter(p => p._id !== id)
+    }), () => this.props.history.push('/'));
+  }
+
+
 
   handleLogout = () => {
     userService.logout();
@@ -22,15 +55,17 @@ class App extends React.Component {
     this.setState({ user: userService.getUser() })
   }
 
+  async componentDidMount() {
+    const notes = await noteAPI.getAll();
+    this.setState({notes});
+  }
+
   render() {
     return (
       <div className="App">
-        <header className='header-footer'>
-          The Second Opinion
+        <header className='App-header'>
+          Hearing Aid Second Opinion
           <nav>
-            <NavLink exact to='/'>VIEW NOTES</NavLink>
-            &nbsp;&nbsp;&nbsp;
-            <NavLink exact to='/add'>ADD NOTES</NavLink>
         <Switch>
           <Route exact path='/' render={() =>
             <NavBar 
@@ -51,8 +86,33 @@ class App extends React.Component {
             />
           }/>
         </Switch>
+          <NavLink exact to='/'>VIEW NOTES</NavLink>
+          &nbsp;&nbsp;&nbsp;
+          <NavLink exact to='/add'>ADD NOTE</NavLink>
         </nav>
         </header>
+        <main>
+          <Route exact path='/' render={() => 
+            <NoteListPage
+              notes={this.state.notes}
+              handleDeleteNote={this.handleDeleteNote}
+            />
+          } />
+          <Route exact path='/add' render={() => 
+            <AddNotePage
+              handleAddNote={this.handleAddNote}
+            />
+          } />
+          <Route exact path='/details' render={({location}) => 
+            <NoteDetailPage location={location}/>
+          } />
+          <Route exact path='/edit' render={({location}) => 
+            <EditNotePage
+              handleUpdateNote={this.handleUpdateNote}
+              location={location}
+            />
+          } />
+        </main>
       </div>
     );
   }
