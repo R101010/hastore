@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import '../../pages/App/App.css';
+import './App.css';
 import userService from '../../utils/userService';
 import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import SignupPage from '../../pages/SignupPage/SignupPage';
+
+import * as noteAPI from ''
 
 class App extends React.Component {
   state = {
