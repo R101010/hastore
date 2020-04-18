@@ -7,6 +7,7 @@ function NoteListItem({note, handleDeleteNote}) {
         <div className='panel panel-default'>
             <div className='panel-heading'>
                 <h3 className='panel-title'>{note.title}</h3>
+                <h4>{note.description}</h4>
             </div>
             <div className='panel-footer NoteListItem-action-panel'>
                 <Link
@@ -39,5 +40,6 @@ function NoteListItem({note, handleDeleteNote}) {
 }
 
 export default NoteListItem;
+
 
 

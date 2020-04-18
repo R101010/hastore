@@ -7,7 +7,7 @@ class AddNotePage extends Component {
             title: '',
             date: '',
             description: '',
-            batteryAge: '1',
+            batteryAge: '',
             cleaned: ''
         }
     };
@@ -20,7 +20,7 @@ class AddNotePage extends Component {
     };
 
     handleChange = e => {
-        const formData = {...this.state.formData, [e.target.title]: e.target.value};
+        const formData = {...this.state.formData, [e.target.name]: e.target.value};
         this.setState({
             formData,
             invalidForm: !this.formRef.current.checkValidity()
@@ -29,11 +29,11 @@ class AddNotePage extends Component {
 
     render() {
         return (
-            <>
+            <React.Fragment>
                 <h1>Add Note</h1>
-                <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+                <form ref={this.formRef} onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Note's Title (required)</label>
+                        <label>Title (required)</label>
                         <input
                             className="form-control"
                             name="title"
@@ -86,7 +86,7 @@ class AddNotePage extends Component {
                         ADD NOTE
                     </button>
                 </form>
-            </>
+            </React.Fragment>
         );
     }
 }

@@ -13,6 +13,10 @@ function NoteCard({note}) {
                     <dd>{note.currentDate}</dd>
                     <dt>Description:</dt>
                     <dd>{note.description}</dd>
+                    <dt>Days since battery change:</dt>
+                    <dd>{note.batteryAge}</dd>
+                    <dt>Is the Hearing Aid clean?</dt>
+                    <dd>{note.cleaned}</dd>
                 </dl>
             </div>
             <div className='panel-footer'>

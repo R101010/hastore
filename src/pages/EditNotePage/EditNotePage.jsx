@@ -15,7 +15,7 @@ class EditNotePage extends Component {
     };
 
     handleChange = e => {
-        const formData = {...this.state.formData, [e.target.title]: e.target.value};
+        const formData = {...this.state.formData, [e.target.name]: e.target.value};
         this.setState({
             formData,
             invalidForm: !this.formRef.current.checkValidity()

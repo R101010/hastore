@@ -13,7 +13,7 @@ import NoteDetailPage from '../../pages/NoteDetailPage/NoteDetailPage';
 import EditNotePage from '../../pages/EditNotePage/EditNotePage';
 
 
-class App extends React.Component {
+class App extends Component {
   state = {
     user: userService.getUser(),
     notes: []
@@ -86,9 +86,6 @@ class App extends React.Component {
             />
           }/>
         </Switch>
-          <NavLink exact to='/'>VIEW NOTES</NavLink>
-          &nbsp;&nbsp;&nbsp;
-          <NavLink exact to='/add'>ADD NOTE</NavLink>
         </nav>
         </header>
         <main>
