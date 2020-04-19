@@ -6,10 +6,10 @@ const NavBar = (props) => {
     let nav = props.user ?
     <>
       <div>
-        <NavLink exact to='/'>VIEW NOTES</NavLink>
+        <NavLink exact to='/'>STORIES</NavLink>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-        <NavLink exact to='/add'>ADD NOTE</NavLink>
+        <NavLink exact to='/add'>SHARE YOUR OWN STORY</NavLink>
       </div>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <div>

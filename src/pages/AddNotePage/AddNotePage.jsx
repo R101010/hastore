@@ -43,7 +43,7 @@ class AddNotePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Current Date </label>
+                        <label>Date: </label>
                         <input 
                             className="form-control"
                             name="currentDate"
