@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 class AddNotePage extends Component {
     state = {
@@ -7,8 +9,7 @@ class AddNotePage extends Component {
             title: '',
             date: '',
             description: '',
-            batteryAge: '',
-            cleaned: ''
+
         }
     };
 
@@ -46,7 +47,7 @@ class AddNotePage extends Component {
                         <label>Current Date</label>
                         <input 
                             className="form-control"
-                            name="date"
+                            name="currentDate"
                             value={this.state.formData.currentDate}
                             onChange={this.handleChange}
                         />
@@ -60,24 +61,7 @@ class AddNotePage extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <div className="form-group">
-                        <label>Days since battery change?</label>
-                        <input 
-                            className="form-control"
-                            name="batteryAge"
-                            value={this.state.formData.batteryAge}
-                            onChange={this.handleChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Is the Hearing Aid clean?</label>
-                        <input 
-                            className="form-control"
-                            name="cleaned"
-                            value={this.state.formData.cleaned}
-                            onChange={this.handleChange}
-                        />
-                    </div>
+                    
                     <button
                         type="submit"
                         className="btn"
@@ -85,6 +69,7 @@ class AddNotePage extends Component {
                     >
                         ADD NOTE
                     </button>
+                    <Link to='/'>CANCEL</Link>
                 </form>
             </React.Fragment>
         );

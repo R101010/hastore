@@ -1,4 +1,4 @@
 .NoteListItem-action-panel {
-    display: flex;
+    display: run-in ;
     justify-content: space-around;
 }

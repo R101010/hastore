@@ -2,11 +2,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var noteSchema = new Schema ({
-    title: {type: String, required: true},
-    currentDate: Number,
+    title: {
+        type: String, 
+        required: true
+    },
+    currentDate: Date,
     description: String,
-    batteryAge: {type: Number, default: 1},
-    cleaned: String
+
 },{
     timestamps: true
 });
