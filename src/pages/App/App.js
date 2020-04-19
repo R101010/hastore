@@ -89,26 +89,29 @@ class App extends Component {
         </nav>
         </header>
         <main>
-          <Route exact path='/' render={() => 
-            <NoteListPage
-              notes={this.state.notes}
-              handleDeleteNote={this.handleDeleteNote}
-            />
-          } />
-          <Route exact path='/add' render={() => 
-            <AddNotePage
-              handleAddNote={this.handleAddNote}
-            />
-          } />
-          <Route exact path='/details' render={({location}) => 
-            <NoteDetailPage location={location}/>
-          } />
-          <Route exact path='/edit' render={({location}) => 
-            <EditNotePage
-              handleUpdateNote={this.handleUpdateNote}
-              location={location}
-            />
-          } />
+            <>
+            <Route exact path='/' render={() => 
+              <NoteListPage
+                notes={this.state.notes}
+                handleDeleteNote={this.handleDeleteNote}
+              />
+            } />
+            <Route exact path='/add' render={() => 
+              <AddNotePage
+                handleAddNote={this.handleAddNote}
+              />
+            }/>
+            <Route exact path='/details' render={({location}) => 
+              <NoteDetailPage location={location}/>
+            } />
+            <Route exact path='/edit' render={({location}) => 
+              <EditNotePage
+                handleUpdateNote={this.handleUpdateNote}
+                location={location}
+              />
+              
+            } />
+            </>
         </main>
       </div>
     );

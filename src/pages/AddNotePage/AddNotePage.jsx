@@ -34,9 +34,8 @@ class AddNotePage extends Component {
                 <h1>Add Note</h1>
                 <form ref={this.formRef} onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Title (required)</label>
+                        <label>Title: </label>
                         <input
-                            className="form-control"
                             name="title"
                             value={this.state.formData.title}
                             onChange={this.handleChange}
@@ -44,7 +43,7 @@ class AddNotePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Current Date</label>
+                        <label>Current Date </label>
                         <input 
                             className="form-control"
                             name="currentDate"
@@ -53,7 +52,7 @@ class AddNotePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Description</label>
+                        <label>Description: </label>
                         <input 
                             className="form-control"
                             name="description"

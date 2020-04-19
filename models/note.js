@@ -3,13 +3,16 @@ var Schema = mongoose.Schema;
 
 var noteSchema = new Schema ({
     title: {
-        type: String, 
-        required: true
+        type: String,
     },
-    currentDate: Date,
-    description: String,
-
-},{
+    currentDate: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
+}, {
     timestamps: true
 });
 

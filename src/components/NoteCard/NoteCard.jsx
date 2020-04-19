@@ -9,9 +9,9 @@ function NoteCard({note}) {
             </div>
             <div className='panel-body'>
                 <dl>
-                    <dt>Date:</dt>
+                    <dt>Date: </dt>
                     <dd>{note.currentDate}</dd>
-                    <dt>Description:</dt>
+                    <dt>Description: </dt>
                     <dd>{note.description}</dd>
 
                 </dl>

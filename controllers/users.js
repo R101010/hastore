@@ -3,13 +3,11 @@ const jwt = require("jsonwebtoken");
 const SECRET = process.env.SECRET;
 
 
-
 async function signup(req, res) {
   const user = new User(req.body);
   try {
     await user.save();
     const token = createJWT(user);
-    console.log("here is the token ", token);
     res.json({ token });
   } catch (err) {
     res.status(400).json(err);
@@ -35,7 +33,7 @@ async function login(req, res) {
 
 function createJWT(user) {
   return jwt.sign(
-    { user }, // data payload
+    { user },
     SECRET,
     { expiresIn: "24h" }
   );
