@@ -3,6 +3,8 @@ const path = require("path");
 const favicon = require("serve-favicon");
 const logger = require("morgan");
 
+
+
 const app = express();
 
 require('dotenv').config();
@@ -16,6 +18,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 app.use("/api/users", require("./routes/api/users"));
+// Mount our custom auth middleware to protect routes below it
+app.use(require('./config/auth'));
 app.use("/api/notes", require("./routes/api/notes"));
 
 // The following "catch all" route (note the *)is necessary

@@ -5,7 +5,7 @@ import NoteListItem from '../../components/NoteListItem/NoteListItem';
 function NoteListPage(props) {
     return (
         <>
-            <h1>Note List</h1>
+            <h1>Share your story of a Secong Opinion.</h1>
             <div className='NoteListPage-grid'>
                 {props.notes.map(note =>
                     <NoteListItem
