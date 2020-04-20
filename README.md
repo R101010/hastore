@@ -4,7 +4,7 @@
 
 ## **Overview**
 
-The Second Opinion is an answer to a problem that exists in many industries that depend on sales, lack of trust in the information that you are receiving. Take a mechanic when buying a used car, get a second opinion for a major surgery, ask a friend with experience in a particular subject for his advice. In this case, you can as a Board-Certified professional advice on your hearing loss treatment. 
+The Second Opinion is an answer to a problem that exists in many industries that depend on sales, lack of trust in the information that you are receiving. Take a mechanic when buying a used car, get a second opinion for a major surgery, ask a friend with experience in a particular subject for his advice. In this case, you can get advice on your hearing loss treatment from a Board-Certified professional. 
 
 There is no cure for hearing loss, hearing aids are the next best thing. A consultant will go over your hearing history and past hearing test results, walk you through what everything means to you. You will then discuss with them your current lifestyle and your future goals to make sure that what hearing aid technology has been recommended will be appropriate. 
 
