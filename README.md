@@ -42,7 +42,7 @@ Use what you have to help others, one simple call is enough.
 7. Github
 8. Git
 9. Heroku
-10. Django template language
+10. Special help from Morty the Mongoose
 
 
 -**The Good Stuff**
