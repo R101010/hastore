@@ -1,21 +1,23 @@
-# **A Cup of Sugar**
+# **The Second Opinion**
 
-![Sugar](https://i.imgur.com/JGsdazC.png)
+![HA Store](https://i.imgur.com/g2K3vyI.png)
 
 ## **Overview**
 
-A Cup of Sugar, like it's name implies is a streamlined, easy to use Python base website, it brings  together people who need a helping hand and those looking to give one. A helping hand might mean something small to you but it could mean the world to someone else.
+The Second Opinion is an answer to a problem that exists in many industries that depend on sales, lack of trust in the information that you are receiving. Take a mechanic when buying a used car, get a second opinion for a major surgery, ask a friend with experience in a particular subject for his advice. In this case, you can as a Board-Certified professional advice on your hearing loss treatment. 
 
-When the Ternary Operators were formed, they had one goal in mind. To create something that could make someone's life a little better. In a moment of inspiration, Danny, one of the founding members of the Ternary Operators thought of a way to bring people together that are in need with those willing to lend a hand. With this vision in mind the Ternary Operators set out to make this moment a reality.
+There is no cure for hearing loss, hearing aids are the next best thing. A consultant will go over your hearing history and past hearing test results, walk you through what everything means to you. You will then discuss with them your current lifestyle and your future goals to make sure that what hearing aid technology has been recommended will be appropriate. 
+
+The goal here is to make sure that the client is given an honest overview of their current situation and a recommendation on the right decision. Saving money is not as important as getting the right technology to treat their particular problem but in most situations, it is a happy by-product. 
+
+Use what you have to help others, one simple call is enough.
+
 
 ## **Screenshots**
-![Landing Page](https://i.imgur.com/MlLUjEU.png)
-![Profile Creation Page](https://i.imgur.com/XfSQo45.png)
-![Add Cup](https://i.imgur.com/6KxvWYC.png)
-![Upload Image](https://i.imgur.com/cN3V5ct.png)
-![Edit Cup](https://i.imgur.com/s4hgQjF.png)
-![Delete Cup](https://i.imgur.com/cN8nsEk.png)
-![All Chats](https://i.imgur.com/9RUY7YD.png)
+![Landing Page](https://i.imgur.com/h7gYq4M.png)
+![Profile Creation Page](https://i.imgur.com/dBQzvGU.png)
+![Log In](https://i.imgur.com/I63QZJd.png)
+
 
 ## **Technologies Used**
 
@@ -41,18 +43,18 @@ When the Ternary Operators were formed, they had one goal in mind. To create som
 
 
 -**The Good Stuff**
-    - [Link to Github](https://github.com/skimalee/cup-of-sugar)
-    - [Link to Heroku](https://cup-o-sugar.herokuapp.com)
-    - [Link to Trello](https://trello.com/b/ZQiZX0Sl/cup-of-sugar)
-    - [Link to pitch deck](https://drive.google.com/file/d/1c89P00TVdw-Nqty0L5bC9RIObVNKEbeR/view)
+    - [Link to Github](https://github.com/R101010/hastore)
+    - [Link to Heroku](https://thesecondopinion.herokuapp.com)
+    - [Link to Trello](https://trello.com/b/PkbaSOmr/ha-store)
+
 
 ## **Planned future enhancements**
-- Google Maps API
--User Ratings
--Search
--User reporting
--Show all cups user has filled
--Choose which user fills which cup
+
+* Google Maps API integration
+* Yelp API intergration
+* Hearing Aid specifics tracker
+* Printable Checklist
+* Troubleshooting wizard
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
