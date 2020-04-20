@@ -20,22 +20,22 @@ Use what you have to help others, one simple call is enough.
 
 
 ## **Technologies Used**
-
-![Python](https://i.imgur.com/ojOw2D8.jpg)
-![Django](https://i.imgur.com/fE8gdHB.png)
+![MERN](https://i.imgur.com/63CgFhX.png)
+![React](https://i.imgur.com/mjycrST.png)
+![Javascript](https://i.imgur.com/hnKiyy9.png)
 ![HTML5](https://i.imgur.com/0Ehoi7U.png)
 ![CSS3](https://i.imgur.com/1RPHV5W.png)
-![SQL](https://i.imgur.com/NqcyEhR.png)
-![PostgreSQL](https://i.imgur.com/Yz3lCYu.png)
+![Node.js](https://i.imgur.com/ZWxlgIG.jpg)
+![MongoDB](https://i.imgur.com/RALRVCg.png)
 ![Github](https://i.imgur.com/7LyflRV.png)
 ![Git](https://i.imgur.com/uA6xQMO.png)
 ![Heroku](https://i.imgur.com/jS7vfhC.jpg)
-1. Python
-2. Django
+1. React
+2. Javascript
 3. HTML5
 4. CSS3
-5. SQL
-6. PostgreSQL
+5. Node.js
+6. MongoDB
 7. Github
 8. Git
 9. Heroku
